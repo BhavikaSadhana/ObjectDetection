@@ -1,0 +1,8 @@
+services:
+  car-detection:
+    image: bhavana686/machinelearn:v1
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+      
