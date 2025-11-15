@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: machinelearn-deployment
+  labels:
+    app: machinelearn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: machinelearn
+  template:
+    metadata:
+      labels:
+        app: machinelearn
+    spec:
+      containers:
+        - name: machinelearn-container
+          image: bhavana686/machinelearn:v1
+          ports:
+            - containerPort: 8888
+            
